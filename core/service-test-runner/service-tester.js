@@ -133,6 +133,7 @@ class ServiceTester {
         if (!skipIntercepted || !spec.intercepted) {
           spec.baseUri(testerBaseUrl)
           spec.retry(retry.count, retry.backoff)
+          spec.timeout(500)
           spec.toss()
         }
       })
